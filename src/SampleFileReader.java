@@ -40,10 +40,10 @@ public class SampleFileReader {
 	public void splitInputDocument(){
 		try {
 			
-			List<String> totalLines = Files.readAllLines(Paths.get("C:\\Users\\santo\\Desktop\\Resources\\cran.all.1400"), StandardCharsets.UTF_8);
+			List<String> totalLines = Files.readAllLines(Paths.get("C:\\Users\\santo\\.jenkins\\jobs\\SampleFileReader\\workspace\\cran.all.1400"), StandardCharsets.UTF_8);
 			System.out.println("Total lines in file ==>"+totalLines.size());
 			
-			stopWordsList = Files.readAllLines(Paths.get("C:\\Users\\santo\\Desktop\\Resources\\stopwords.txt"), StandardCharsets.UTF_8);
+			stopWordsList = Files.readAllLines(Paths.get("C:\\Users\\santo\\.jenkins\\jobs\\SampleFileReader\\workspace\\stopwords.txt"), StandardCharsets.UTF_8);
 			System.out.println("total stop words count ==>"+stopWordsList.size());
 			
 			
@@ -220,7 +220,7 @@ public class SampleFileReader {
 		
 		String word = null;
 		int count= 0;
-		File outputFile=new File("C:\\Users\\santo\\Desktop\\Resources\\output.txt");
+		File outputFile=new File("C:\\Users\\santo\\.jenkins\\jobs\\SampleFileReader\\workspace\\output.txt");
 		FileOutputStream fos=null;
 		 PrintWriter wordWriter=null;
 		try{

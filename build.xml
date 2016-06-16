@@ -1,0 +1,17 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<project default = "clean" name = "myfirstbuild" >
+	<target name = "run" depends = "compile">
+		<java classname = "SampleFileReader">
+			<classpath path = "staging"/>
+		</java>
+	</target>
+	<target name = "compile" depends = "init">
+		<javac includeantruntime = "false" srcdir="./src" destdir="staging"/>
+	</target>
+	<target name = "init">
+		<mkdir dir = "./staging"/>
+	</target>
+	<target name = "clean" depends = "run">
+		<delete dir = "staging"/>
+	</target>
+</project>
